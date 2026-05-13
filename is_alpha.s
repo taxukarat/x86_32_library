@@ -9,7 +9,7 @@ is_alpha:
         mov al, [esp+0x8]
         cmp al, 122
         ja err
-        cmp al, 90
+        cmp al, 91
         jb cap
         cmp al, 97
         jb err
