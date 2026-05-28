@@ -5,5 +5,6 @@ all:
         @nasm -f elf32 is_alnum.s -o is_alnum.o
         @nasm -f elf32 print_capital.s -o print_capital.o
         @nasm -f elf32 string_compare.s -o string_compare.o
+        @nasm -f elf32 print_num.s -o print_num.o
 clean:
-        rm strlen.o is_alpha.o is_num.o is_alnum.o print_capital.o string_compare.o
+        rm strlen.o is_alpha.o is_num.o is_alnum.o print_capital.o string_compare.o print_num.o
