@@ -12,6 +12,8 @@ print_unsigned_num:
         mov ecx, [ebp+0x8]
         push ebx
         push edi
+        cmp ecx, 0
+        je print_zero
         mov edi, 0
         mov ebx, 10
 loop:
@@ -46,8 +48,19 @@ print_loop:
         cmp eax, 0
         jne print_loop
         mov eax, edi
+print_unsigned_num_ret:
         pop edi
         pop ebx
         mov esp, ebp
         pop ebp
         ret
+print_zero:
+        mov ecx, 48
+        push ecx
+        mov eax, 4
+        mov ebx, 1
+        mov ecx, esp
+        mov edx, 1
+        int 0x80
+        pop ecx
+        jmp print_unsigned_num_ret
