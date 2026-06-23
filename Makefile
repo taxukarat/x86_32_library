@@ -8,6 +8,7 @@ all:
         @nasm -f elf32 print_num.s -o print_num.o
         @nasm -f elf32 ascii_to_int.s -o ascii_to_int.o
         @nasm -f elf32 print_unsigned_num.s -o print_unsigned_num.o
+        @nasm -f elf32 tax_malloc.s -o tax_malloc.o
 clean:
         rm strlen.o is_alpha.o is_num.o is_alnum.o print_capital.o string_compare.o \
-        print_num.o ascii_to_int.o print_unsigned_num.o
+        print_num.o ascii_to_int.o print_unsigned_num.o tax_malloc.o
